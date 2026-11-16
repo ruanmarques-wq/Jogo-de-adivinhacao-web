@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação de Palavras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="jogo">
+        <header class="cabecalho">
+            <p class="etiqueta">DESENVOLVIMENTO WEB I</p>
+            <h1>Adivinhe a Palavra</h1>
+            <p class="subtitulo">Descubra a palavra antes que suas tentativas acabem.</p>
+        </header>
+
+        <section class="painel" aria-label="Área do jogo">
+            <div class="informacoes">
+                <div class="info">
+                    <span class="info-titulo">Tentativas restantes</span>
+                    <strong id="tentativas">6</strong>
+                </div>
+                <div class="info">
+                    <span class="info-titulo">Categoria</span>
+                    <strong id="categoria">-</strong>
+                </div>
+            </div>
+
+            <p id="palavra" class="palavra" aria-live="polite">_ _ _ _ _</p>
+
+            <p id="mensagem" class="mensagem" aria-live="polite">Digite uma letra para começar!</p>
+
+            <label for="letra">Digite uma letra</label>
+            <div class="entrada">
+                <input id="letra" type="text" maxlength="1" autocomplete="off"
+                       placeholder="A" aria-label="Digite uma letra">
+                <button id="btn-tentar" type="button">Tentar</button>
+            </div>
+
+            <div class="letras">
+                <span class="info-titulo">Letras utilizadas</span>
+                <p id="letras-usadas">Nenhuma</p>
+            </div>
+
+            <button id="btn-reiniciar" class="botao-secundario" type="button">Nova partida</button>
+        </section>
+
+        <footer>
+            <p>Feito com HTML, CSS e JavaScript</p>
+        </footer>
+    </main>
+</body>
+</html>
